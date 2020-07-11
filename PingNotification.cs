@@ -152,7 +152,7 @@ namespace PingTimeoutNotifications
 
         private async Task PingAndUpdateNodeAsync(Ping ping, IPAddress ip)
         {
-            var reply = await ping.SendPingAsync(ip, 1000, buffer, options);
+            var reply = await ping.SendPingAsync(ip, 30 * 1000, buffer, options);
             if (reply.Status == IPStatus.Success)
             {
                 ConsoleOut(ip + " is up!");
