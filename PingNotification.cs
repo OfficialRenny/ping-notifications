@@ -27,7 +27,6 @@ namespace PingTimeoutNotifications
             numudInterval.Value = defaultIntervalMins;
             currentIntervalMins = defaultIntervalMins;
             cancellation = new CancellationTokenSource();
-            cancellation.Cancel();
             UpdateLabels();
         }
 
